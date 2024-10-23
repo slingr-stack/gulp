@@ -58,9 +58,7 @@
   },
   "overrides": {
     "gaze": "1.1.0",
-    "glob-stream": {
-      "minimatch": "3.0.5"
-    }
+    "minimatch": "3.0.5"
   },
   "scripts": {
     "prepublish": "marked-man --name gulp docs/CLI.md > gulp.1",
