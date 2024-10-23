@@ -2,9 +2,9 @@
 
 var util = require('util');
 var Orchestrator = require('orchestrator');
-var gutil = require('gulp-util');
 var deprecated = require('deprecated');
 var vfs = require('vinyl-fs');
+var parseArgs = require('minimist');
 
 function Gulp() {
   Orchestrator.call(this);
@@ -50,7 +50,7 @@ deprecated.field('gulp.env has been deprecated. ' +
   console.warn,
   Gulp.prototype,
   'env',
-  gutil.env
+  parseArgs(process.argv.slice(2))
 );
 
 Gulp.prototype.run = deprecated.method('gulp.run() has been deprecated. ' +
